@@ -1,0 +1,611 @@
+/*
+Theme Name: SimpleCart
+Theme URI: http://upthemes.com/themes/simplecart/
+Description: An e-commerce WordPress theme built to be used with WP E-commerce.
+Author: Chris Wallace for UpThemes
+Author URI: http://upthemes.com
+Version: 2.1
+*/
+
+/* Reset browser defaults */
+@import url('library/styles/reset.css');
+
+/* Apply basic typography styles */
+@import url('library/styles/typography.css');
+
+/* Apply basic image styles */
+@import url('library/styles/images.css');
+
+/* Apply default theme styles and colors */
+@import url('library/styles/default.css');
+
+/* Prepare theme for plugins */
+@import url('library/styles/plugins.css');
+
+a,
+a:link,
+a:visited{
+	color: #10809d;
+}
+
+a:hover{
+	color: #2899bd;
+}
+
+a:active{
+	color: #24b9db;
+}
+
+body{
+	background: #fff;
+	font: 85%/180% Helvetica, Arial, Tahoma, sans-serif;
+}
+#main{
+}
+
+#main,
+#container{
+	height: auto;
+}
+
+#content{
+  min-height: 500px;
+}
+
+#blog-title{
+	display: inline-block;
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 30px;
+}
+#blog-title a{
+	color: white;
+}
+
+#blog-title a:hover{
+	color: rgba(255,255,255,0.9);
+}
+
+#blog-description{
+	display: inline-block;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-style: italic;
+	font-weight: normal;
+	color: white;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-khtml-border-radius: 6px;
+	padding: 10px;
+	position: relative;
+	top: -5px;
+}
+
+#access{
+	float: right;
+	width: 630px;
+	margin: 0 10px 0 0;
+}
+
+#access,
+#nav{
+	border: none;
+}
+
+#nav{
+	display: inline;
+	width: auto;
+	float: right;
+}
+
+div.entry-content table.productcart tr.firstrow td{
+	background-color: #fff;
+	padding: 4px;
+}
+
+div.entry-content table.wpsc_checkout_table{
+  margin-top: 20px;
+}
+
+.aside ul{
+	margin: 0 20px 20px 20px;
+}
+
+div.entry-content table.wpsc_checkout_table td{
+	padding: 4px;
+	font-size: 1.4em
+}
+
+.entry-content h1, .entry-content h2{
+	font-size: 1.6em
+}
+
+.entry-content h1.reverse{
+	margin: 0 0 0.5em 0;
+	padding: 0;
+	position: relative;
+}
+
+.entry-content h4{
+	font-size: 1.2em
+}
+
+div.entry-content .wpsc_checkout_table input,
+div.entry-content .wpsc_checkout_table textarea,
+div.entry-content .wpsc_checkout_table select{
+	width: 500px;
+	font-size: 1.4em;
+	padding: 5px;
+}
+
+span.total{
+	margin-top: 25px;
+	text-align: right;
+}
+
+#content,
+#primary,
+#footer{
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+	background-color: #fff;
+}
+
+#container > *,
+#primary > *{
+	padding: 0;
+}
+
+#primary {
+	margin-top: 0 !important;
+}
+
+h1.entry-title{
+	padding-top: 0;
+	margin: 0 0 10px 0;
+}
+h2{
+	font-size:22px;
+	color:#429132;
+}
+.entry-title,
+.entry-content{
+	padding: 0;
+	width: auto;
+}
+.aside h3{
+	border-bottom: none;
+}
+#products_page_container{
+	width:auto;
+	margin: 0;
+}
+#products_page_container > ul li{
+	float:left;
+	width: 33%;
+	list-style: none;
+}
+#products_page_container li div.inner{
+	margin-right: 20px;
+}
+#products_page_container li:nth-child(3n) div.inner{
+	margin-right: 0;
+}
+#products_page_container li img{
+	display:block;
+	max-width: 100%;
+}
+span.price, span.currentprice{
+	font-weight: normal;
+        color:#444 !important;
+}
+span.pricedisplay{
+	font-weight: bold;
+	height:21px;
+	line-height:20px;
+	margin:6px 4px 0 0;
+	color:#fff;
+	padding: 2px 5px;
+	
+}
+.entry-content h3{
+	font-size:15px;
+	margin: 0 0 6px 0;
+	padding: 0;
+	font-size: 14px;
+	color: black;
+	text-decoration: none;
+	border: none;
+	font-style: normal;
+}
+.entry-content h3 a{
+	font-size: 12px;
+}
+h3.widgettitle{
+	color:#444;
+	font-size:1.2em;	
+	font-style: normal;
+}
+.wpsc_product_price{
+}
+span.emptycart button{
+	color: black;
+	background: none;
+	border: none;
+	font-size: 11px;
+	text-decoration: underline;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+span.emptycart button,
+.entry-content input.wpsc_buy_button:hover{
+	text-decoration: none;
+	cursor:pointer;
+}
+#primary{
+  border: none;
+  margin: 60px 0 0 0;
+  padding: 18px 0 0;
+}
+.aside{
+	float:right;
+	margin-right:5px;
+	width:248px;
+	margin-top:-70px;
+	
+}
+.aside a{
+	font-size:11px;
+}
+.aside a.simpleCart_checkout,
+.checkoutEmptyLinks a.simpleCart_checkout{
+	display:-moz-inline-box;
+	display:inline-block;
+	width:87px;
+	height:25px;
+	background:url(images/btnCheckout.gif);
+	overflow:hidden;
+	margin-left:100px;
+	vertical-align:middle;
+	text-indent:-9999px;
+	font-size:0;
+}
+a.btnCheckout:hover{
+	background-position:87px 0;
+}
+#downloadContainer{
+	width:230px;
+	font-size:11px;
+	font-weight:normal;
+	margin-top:52px;
+}
+#downloadContainer a{
+	color:#222;
+	text-decoration:none;
+}
+#downloadContainer a:hover{
+	text-decoration:underline;
+}
+h3{
+	font-size:22px;
+	color:#c23f26;
+	padding-bottom:4px;
+	margin-bottom:9px;
+	border-bottom:1px dashed #d1d4d5;
+}
+#footer{
+	clear:both;
+	text-align:center;
+	color:#222;
+	width:910px;
+	margin:15px auto 30px;
+	background-color: #fff;
+	padding: 10px 15px;
+}
+#footer a{
+	color:white;
+  text-decoration:underline;
+}
+#footer a:hover{
+  text-decoration: none;
+}
+#smallLogo{
+	margin-top:2px;
+	vertical-align:bottom;
+}
+/*************************
+my cart page
+*************************/
+.alsoContainer{
+	float:left;
+	clear:left;
+	padding:15px 0;
+}
+.alsoInfo,
+.alsoImage,
+.alsoPrice{
+	float:left;
+}
+.alsoImage{
+	margin-right:8px;
+}
+.alsoInfo{
+	margin-right:9px;
+	width:90px;
+}
+.aside .alsoContainer a{
+	color:#c23f26;
+}
+.alsoPrice{
+	color:#418932;
+	font-size:13px;
+	padding-top:5px;
+}
+.checkoutEmptyLinks{
+	float:left;
+	clear:left;
+	width:500px;
+	padding-left:221px;
+}
+.checkoutEmptyLinks a{
+	color:#000;
+	font-size:11px;
+}
+/*************************
+Top Frame
+*************************/
+
+#branding{
+	padding: 50px 0 0 0;
+}
+
+#wrapper,
+#header{
+	margin: 0;
+	padding: 0;
+}
+
+#header{
+	position: inherit;
+	padding: 50px 0 20px 0;
+}
+
+#footer{
+	border-top: 0
+}
+
+.clearboth{
+	clear: both;
+}
+
+.clear{
+	clear: both;
+	display: block;
+	overflow: hidden;
+	height: 0;
+	visibility: hidden;
+}
+
+.cartHeaders,.totalRow{display:none;}
+.simpleCart_items{
+	overflow-y:auto;
+	overflow-x:hidden;
+	height:324px;
+	width:243px;
+	margin-bottom:20px;
+}
+.itemContainer{
+	clear:both;
+	width:229px;
+	padding:11px 0;
+	font-size:11px;
+}
+.itemImage{
+	float:left;
+	width:60px;
+}
+.itemName{
+	float:left;
+	width:85px;
+}
+.itemPrice{
+	float:left;
+	width:85px;
+	color:#418932;
+}
+.itemQuantity{
+	float:left;
+	width:33px;
+	margin-top:-12px;
+	vertical-align:middle;
+}
+.itemQuantity input{
+	width:20px;
+	border:1px solid #ccc;
+	padding:3px 2px;
+}
+
+.itemTotal{
+	float:left;
+	color:#c23f26;
+	margin-top:-6px
+}
+
+#siteinfo {
+	color: #999;
+	font-size:11px;
+	line-height:18px;
+	padding:0;
+}
+
+#siteinfo a{
+  color: #666;
+}
+#siteinfo a:hover{
+  -moz-opacity: 0.80;
+  -webkit-opacity: 0.80;
+  opacity: 0.80
+}
+table.shoppingcart,
+table.shoppingcart td,
+table.shoppingcart thead,
+table.shoppingcart tbody,
+table.shoppingcart th{
+	border: 0
+}
+table.shoppingcart th,
+table.shoppingcart td{
+  vertical-align: middle
+}
+
+.page-title{
+	font-size: 1.4em;
+	line-height: 1.2em;
+	padding:  0 0 0.75em 0;
+}
+
+.entry-meta,
+.entry-content{
+	margin-bottom: 1em;
+}
+
+.entry-utility{
+	margin-bottom: 0;
+}
+
+#nav-below.navigation{
+	margin: 0;
+}
+
+.aside input[type="text"]{
+	border: 1px solid #ddd;
+	width: 190px;
+	padding: 8px;
+	font: 12px Helvetica, Arial, Tahoma, sans-serif;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+.aside ul.xoxo li.widgetcontainer{
+	margin-bottom: 2em;
+}
+
+.aside ul li.widgetcontainer ul,
+.aside ul li.widgetcontainer ul li{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.aside ul li.widgetcontainer ul{
+	border-top: 1px solid #f2f2f2;
+}
+
+.aside ul li.widgetcontainer ul li{
+	border-bottom: 1px solid #f2f2f2;
+}
+
+.aside ul li.widgetcontainer ul li a{
+	display: block;
+	padding: 3px 6px;
+	text-decoration: none;
+}
+
+.widget_wpsc_categorisation .wpsc_category_image_link{
+	display: none !important;
+}
+
+.aside ul li.widgetcontainer ul li a:hover{
+	background-color: #f2f2f2;
+}
+
+.widgetcontainer p.empty{
+	border: 1px solid #eee;
+	padding: 12px 0 2px 0;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	text-align: center;
+	color: #ccc;
+	margin-bottom: 1em;
+}
+
+.widgetcontainer p.empty,
+.widgetcontainer p.visitshop{
+	padding-bottom: 1em;
+}
+
+/* Thickbox Overlay */
+
+#TB_window {
+    z-index:1000 !important;
+}
+
+#TB_overlay{
+    z-index:999 !important;
+}
+
+/* -------------------------------------------------------------- 
+   
+   Default styles for Images
+   
+   I've duplicated these styles here from images.css in
+   order to get Thematic through the auto-checker at the
+   official WordPress Themes directory.
+   
+   When the directory can hunt though css files linked
+   through @import the styles below will no longer be
+   neccesary and will be removed.
+   
+   Cheers. --Ian Stewart
+  
+-------------------------------------------------------------- */   
+
+.entry-content img {
+    margin: 0 0 18px 0;
+    max-width:100%;
+}
+.alignleft,
+img.alignleft {
+	float: left;
+    margin-right:20px;
+}
+.alignright,
+img.alignright {
+	display: block;
+	float: right;
+    margin-left:20px;
+}
+.aligncenter,
+img.aligncenter {
+	margin-left:auto;
+	margin-right:auto;
+	display: block;
+	clear: both;
+}
+.wp-caption {
+	text-align: center;
+	margin-bottom:18px;
+}
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+.wp-caption p.wp-caption-text {
+	margin: 0;
+	padding:5px;
+}
+.gallery img {
+    margin:0;
+}
+.wp-smiley { /* Prevent the smileys from breaking line-height */
+	max-height:12px;
+	margin:0 !important;
+}
+.post-edit-link{
+    margin:5px 0 0;
+}
