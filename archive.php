@@ -1,48 +1,129 @@
 <?php
+/**
+ * Archive index template file
+ *
+ * This file is the archive index template file, used when no other file matches in
+ * the {@link http://codex.wordpress.org/Template_Hierarchy Template Hierarchy}.
+ * 
+ * @link		http://codex.wordpress.org/Function_Reference/get_header 			get_header()
+ * @link 		http://codex.wordpress.org/Function_Reference/get_footer 			get_footer()
+ * @link 		http://codex.wordpress.org/Function_Reference/get_sidebar 			get_sidebar()
+ * @link 		http://codex.wordpress.org/Function_Reference/rewind_posts 			rewind_posts()
+ * @link 		http://codex.wordpress.org/Function_Reference/the_post	 			the_post()
+ * 
+ * @uses		simplecart_abovecontainer()		Defined in /library/extensions/content-extensions.php
+ * @uses		simplecart_page_title()			Defined in /library/extensions/content-extensions.php
+ * @uses		simplecart_navigation_above()	Defined in /library/extensions/content-extensions.php
+ * @uses		simplecart_archiveloop()		Defined in /library/extensions/content-extensions.php
+ * @uses		simplecart_navigation_below()	Defined in /library/extensions/content-extensions.php
+ * @uses		simplecart_belowcontainer()		Defined in /library/extensions/content-extensions.php
+ * @uses		simplecart_sidebar()			Defined in /library/extensions/sidebar-extensions.php
+ *
+ * @package 	SimpleCart
+ * @copyright	Copyright (c) 2010, UpThemes
+ * @license		http://www.gnu.org/licenses/old-licenses/gpl-2.0.html GNU General Public License, v2 (or newer)
+ * @since 		SimpleCart 1.0
+ */ 
 
-    // calling the header.php
-    get_header();
+/**
+ * Include the header template part file
+ * 
+ * MUST come first. 
+ * Calls the header PHP file. 
+ * Used in all primary template pages
+ * 
+ * @see {@link: http://codex.wordpress.org/Function_Reference/get_header get_header}
+ * 
+ * Child Themes can replace this template part file globally, via "header.php", or in
+ * a specifric context only, via "header-archive.php"
+ */
+get_header( 'archive' );
 
-    // action hook for placing content above #container
-    simplecart_abovecontainer();
-
+/**
+ * Fire the 'simplecart_abovecontainer' custom action hook
+ * 
+ * @param	null
+ * @return	mixed	any output hooked into 'simplecart_abovecontainer'
+ */
+simplecart_abovecontainer();
 ?>
 
-	<div id="container">
-		<div id="content">
-			<div class="inner">
-            <?php 
+<div id="container">
+	<div id="content">
+		<div class="inner">
+		<?php 
 
-            the_post();
+		the_post();
 
-            // displays the page title
-            simplecart_page_title();
+		/**
+		 * Display Page Title
+		 * 
+		 * Output contextually dynamic Page Title
+		 * 
+		 * @param	null
+		 * @return	string	HTML markup for Page Title
+		 */
+		simplecart_page_title();
 
-            rewind_posts();
+		rewind_posts();
 
-            // create the navigation above the content
-            simplecart_navigation_above();
+		/**
+		 * Fire the 'simplecart_navigation_above' custom action hook
+		 * 
+		 * @param	null
+		 * @return	mixed	any output hooked into 'simplecart_navigation_above'
+		 */
+		simplecart_navigation_above();
 
-            // action hook creating the archive loop
-            simplecart_archiveloop();
+		/**
+		 * Fire the 'simplecart_archiveloop' custom action hook
+		 * 
+		 * @param	null
+		 * @return	mixed	any output hooked into 'simplecart_archiveloop'
+		 */
+		simplecart_archiveloop();
 
-            // create the navigation below the content
-            simplecart_navigation_below();
+		/**
+		 * Fire the 'simplecart_navigation_below' custom action hook
+		 * 
+		 * @param	null
+		 * @return	mixed	any output hooked into 'simplecart_navigation_below'
+		 */
+		simplecart_navigation_below();
 
-            ?>
-			</div>
-		</div><!-- #content .hfeed -->
-	</div><!-- #container -->
+		?>
+		</div><!-- .inner -->
+	</div><!-- #content .hfeed -->
+</div><!-- #container -->
 
 <?php 
+/**
+ * Fire the 'simplecart_belowcontainer' custom action hook
+ * 
+ * @param	null
+ * @return	mixed	any output hooked into 'simplecart_belowcontainer'
+ */
+simplecart_belowcontainer();
 
-    // action hook for placing content below #container
-    simplecart_belowcontainer();
+/**
+ * Include the default sidebar
+ * 
+ * @param	null
+ * @return	mixed	get_sidebar() output
+ */
+simplecart_sidebar();
 
-    // calling the standard sidebar 
-    simplecart_sidebar();
-    
-    // calling footer.php
-    get_footer();
-
+/**
+ * Include the footer template part file
+ * 
+ * MUST come last. 
+ * Calls the footer PHP file. 
+ * Used in all primary template pages
+ * 
+ * Codex reference: {@link http://codex.wordpress.org/Function_Reference/get_footer get_footer}
+ * 
+ * Child Themes can replace this template part file globally, via "footer.php", or in
+ * a specific context only, via "footer-archive.php"
+ */
+get_footer( 'archive' );
 ?>
