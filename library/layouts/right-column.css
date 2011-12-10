@@ -17,7 +17,7 @@ body {
     position:relative;
 }
 .menu {
-    width:940px;
+    max-width:940px;
     margin:0 auto;
 }
 #main {
