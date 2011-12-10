@@ -132,5 +132,5 @@ simplecart_sidebar();
  * Child Themes can replace this template part file globally, via "footer.php", or in
  * a specific context only, via "footer-page.php"
  */
-get_footer 'page' );
+get_footer( 'page' );
 ?>
